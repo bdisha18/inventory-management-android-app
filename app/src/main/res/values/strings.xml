@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Inventory</string>
+
+
+    <string name="sign_in">SignIn</string>
+    <string name="sign_up">SignUp</string>
+    <string name="title_signup">Create an Account.</string>
+    <string name="info_signup">Fill up information to Register.</string>
+    <string name="full_name">Full Name</string>
+    <string name="company_name">Company Name</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="address">Address</string>
+    <string name="pincode">Pincode</string>
+    <string name="contactno">Contact No.</string>
+    <string name="continued">Continue</string>
+    <string name="back">Back</string>
+    <string name="imgpass1">Fill up More Details.</string>
+    <string name="imgpass2">Set Profile Pic and Password.</string>
+    <string name="otp">Send an OTP.</string>
+    <string name="forgot_password1">Forgot Password</string>
+    <string name="forgot_password2">Enter your email address for password reset link.</string>
+
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_home">Home</string>
+    <string name="title_vendors">Vendors</string>
+    <string name="title_suppliers">Suppliers</string>
+    <string name="title_stock">Stock</string>
+    <string name="title_product">Products</string>
+    <string name="title_contact">Clients</string>
+    <string name="title_setting">Setting</string>
+    <string name="total_stock">Total Stock</string>
+    <string name="hint_search">Search Product</string>
+    <string name="title_dashboard">Dashboard</string>
+
+    <string name="stock">Stock In/Out</string>
+    <string name="filter">Filter</string>
+    <string name="sort">Sort</string>
+    <string name="stock_in">Stock In</string>
+    <string name="stock_out">Stock Out</string>
+
+
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_buyers_list">BuyersList</string>
+    <string name="spinner_size_title">Select Size</string>
+    <string name="spinner_type_title">Select Type</string>
+    <string name="spinner_colour_title">Select Colour</string>
+
+    <string name="input_vendor">Input Vendor</string>
+    <string name="input_supplier">Input Supplier</string>
+    <string name="please_input_vendor">Please Input Vendor Name</string>
+    <string name="please_input_supplier">Please Input Supplier name</string>
+
+    <string name="phone_number">Phone Number</string>
+    <string name="generate_otp">Generate OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify_sign_in">Verify and Sign In</string>
+    <string name="sign_out">sign out</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

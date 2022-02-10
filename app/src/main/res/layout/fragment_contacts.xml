@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="20dp"
+    android:orientation="vertical"
+    tools:context=".BottomNavigationBar.ContactsFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="@string/title_contact"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/supplier_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/grey_rounded_background"
+            android:padding="15dp"
+            android:text="@string/title_suppliers"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/light_grey"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@color/default_grey"/>
+
+
+        <Button
+            android:id="@+id/vendor_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="@drawable/grey_rounded_background"
+            android:padding="10dp"
+            android:text="@string/title_vendors"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/light_grey"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"/>
+
+    <FrameLayout
+        android:id="@+id/contacts_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
+
+

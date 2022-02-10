@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_box_background"
+    android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category Options"
+            android:textAlignment="center"
+            android:textColor="@color/dark_grey"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/default_grey"/>
+
+        <TextView
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="15dp"
+            android:text="Edit"
+            android:textAlignment="center"
+            android:textColor="@color/dark_grey"
+            android:textSize="25dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/default_grey"
+            />
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="15dp"
+            android:text="Delete"
+            android:textAlignment="center"
+            android:textColor="@color/dark_grey"
+            android:textSize="25dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/default_grey"
+            />
+
+        <Button
+            android:id="@+id/cancel_option"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/yellow_rounded_button"
+            android:paddingVertical="10dp"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textSize="30dp"/>
+
+</LinearLayout>
