@@ -24,6 +24,9 @@
         android:theme="@style/Theme.InventoryManagement"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Contacts.ContactDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".SettingsActivity"
             android:exported="false" />
         <activity
@@ -91,12 +94,9 @@
             android:exported="false" />
         <activity
             android:name=".DashboardActivity"
-            android:exported="false" />
-
-<!--        <uses-library-->
-<!--            android:name="org.apache.http.legacy"-->
-<!--            android:required="false" />-->
-
+            android:exported="false" /> <!-- <uses-library -->
+        <!-- android:name="org.apache.http.legacy" -->
+        <!-- android:required="false" /> -->
         <activity
             android:name=".Auth.OtpVerification"
             android:exported="false" />

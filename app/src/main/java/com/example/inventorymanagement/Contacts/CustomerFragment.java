@@ -37,6 +37,7 @@ public class CustomerFragment extends Fragment {
     String url = "http://10.0.2.2/inventoryApp/customerList.php";
     private CustomerListAdapter adapter;
     private List<Customers> customersList;
+    CustomerListAdapter.OnCustomerListener listener;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,7 +49,7 @@ public class CustomerFragment extends Fragment {
 
 //        tv_date = rootView.findViewById(R.id.dateAdded);
 
-
+        setOnClickListener();
         recyclerView = rootView.findViewById(R.id.customersListView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -106,7 +107,7 @@ public class CustomerFragment extends Fragment {
                         jsonException.printStackTrace();
                     }
                 }
-                adapter = new CustomerListAdapter(getContext(), customersList);
+                adapter = new CustomerListAdapter(getContext(), customersList, listener);
                 recyclerView.setAdapter(adapter);
             }
 
@@ -118,6 +119,16 @@ public class CustomerFragment extends Fragment {
         });
         RequestQueue requestQueue = Volley.newRequestQueue(getContext());
         requestQueue.add(request);
+    }
+
+    private void setOnClickListener() {
+        listener = new CustomerListAdapter.OnCustomerListener() {
+            @Override
+            public void onCustomerClick(View v, int position) {
+                    Intent i = new Intent(getContext(), ContactDetailsActivity.class);
+                    startActivity(i);
+            }
+        };
     }
 
 }

@@ -49,6 +49,9 @@ private VendorListAdapter vendorListAdapter;
 private LocationListAdapter locationListAdapter;
 private ProductListAdapter productListAdapter;
 
+CustomerListAdapter.OnCustomerListener customerListener;
+VendorListAdapter.OnVendorListener vendorListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -168,7 +171,7 @@ private ProductListAdapter productListAdapter;
                         jsonException.printStackTrace();
                     }
                 }
-                customerListAdapter = new CustomerListAdapter(SelectedItemActivity.this, customers);
+                customerListAdapter = new CustomerListAdapter(SelectedItemActivity.this, customers, customerListener);
                 recyclerView.setAdapter(customerListAdapter);
             }
 
@@ -201,7 +204,7 @@ private ProductListAdapter productListAdapter;
                         jsonException.printStackTrace();
                     }
                 }
-                vendorListAdapter = new VendorListAdapter(SelectedItemActivity.this, vendors);
+                vendorListAdapter = new VendorListAdapter(SelectedItemActivity.this, vendors, vendorListener);
                 recyclerView.setAdapter(vendorListAdapter);
             }
 

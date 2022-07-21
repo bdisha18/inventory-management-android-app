@@ -18,10 +18,12 @@ public class CustomerListAdapter extends RecyclerView.Adapter<CustomerListAdapte
 
     Context context;
     List<Customers> customerList;
+    OnCustomerListener listener;
 
-    public CustomerListAdapter(Context context, List<Customers> customerList) {
+    public CustomerListAdapter(Context context, List<Customers> customerList, OnCustomerListener listener) {
         this.context = context;
         this.customerList = customerList;
+        this.listener = listener;
     }
 
 
@@ -30,7 +32,7 @@ public class CustomerListAdapter extends RecyclerView.Adapter<CustomerListAdapte
     public CustomersHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_customer_list_adapter, parent, false);
 
-        return new CustomerListAdapter.CustomersHolder(view);
+        return new CustomerListAdapter.CustomersHolder(view, listener);
     }
 
     @Override
@@ -45,11 +47,27 @@ public class CustomerListAdapter extends RecyclerView.Adapter<CustomerListAdapte
         return customerList.size();
     }
 
-    public class CustomersHolder extends RecyclerView.ViewHolder {
+    public interface OnCustomerListener {
+        void onCustomerClick(View v, int position);
+    }
+
+    public class CustomersHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView e_customerName;
-        public CustomersHolder(@NonNull View itemView) {
+        OnCustomerListener onCustomerListener;
+        public CustomersHolder(@NonNull View itemView, OnCustomerListener onCustomerListener) {
             super(itemView);
             e_customerName = itemView.findViewById(R.id.customer_name);
+
+
+            this.onCustomerListener =onCustomerListener;
+            itemView.setOnClickListener(this);
+
+        }
+
+
+        @Override
+        public void onClick(View view) {
+            listener.onCustomerClick(view, getBindingAdapterPosition());
         }
     }
 }

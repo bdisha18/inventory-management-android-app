@@ -36,6 +36,7 @@ public class VendorFragment extends Fragment {
     private RecyclerView recyclerView;
     private VendorListAdapter adapter;
     private List<Vendors> vendorsList;
+    VendorListAdapter.OnVendorListener listener;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,7 +44,7 @@ public class VendorFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_vendor, container, false);
 //        vendor_count = rootView.findViewById(R.id.total_vendors);
 //        vendor_count.setText(String.valueOf(vendorsList.size()));
-
+        setOnClickListener();
         recyclerView = rootView.findViewById(R.id.vendorsListView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -101,7 +102,7 @@ public class VendorFragment extends Fragment {
                         jsonException.printStackTrace();
                     }
                 }
-                adapter = new VendorListAdapter(getContext(), vendorsList);
+                adapter = new VendorListAdapter(getContext(), vendorsList, listener);
                 recyclerView.setAdapter(adapter);
             }
 
@@ -113,5 +114,15 @@ public class VendorFragment extends Fragment {
         });
         RequestQueue requestQueue = Volley.newRequestQueue(getContext());
         requestQueue.add(request);
+    }
+
+    private void setOnClickListener() {
+        listener = new VendorListAdapter.OnVendorListener() {
+            @Override
+            public void onVendorClick(View v, int position) {
+                Intent i = new Intent(getContext(), ContactDetailsActivity.class);
+                startActivity(i);
+            }
+        };
     }
 }

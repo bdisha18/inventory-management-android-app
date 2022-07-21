@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,6 +62,7 @@ public class StockFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_stock, container, false);
+       setOnClickListener();
         recyclerView = rootView.findViewById(R.id.stock_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -76,7 +76,6 @@ public class StockFragment extends Fragment {
         products = new ArrayList<Products>();
 
         retrieveStocks();
-        setOnClickListener();
 
         add_stock = rootView.findViewById(R.id.add_stocks);
         add_stock.setOnClickListener(new View.OnClickListener() {
@@ -231,9 +230,8 @@ public class StockFragment extends Fragment {
         listener = new StockInnerListAdapter.OnStockListener() {
             @Override
             public void onStockClick(View v, int position) {
-                Log.d("fbb", "Rbsb");
-               Intent i1 = new Intent(getContext(), ProductDetails.class);
-               startActivity(i1);
+               Intent i = new Intent(getContext(), ProductDetails.class);
+               startActivity(i);
 
             }
         };
