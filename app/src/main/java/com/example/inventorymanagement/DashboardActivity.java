@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment;
 import com.example.inventorymanagement.BottomNavigationBar.ContactsFragment;
 import com.example.inventorymanagement.BottomNavigationBar.HomeFragment;
 import com.example.inventorymanagement.BottomNavigationBar.ProductsFragment;
-import com.example.inventorymanagement.BottomNavigationBar.SettingFragment;
 import com.example.inventorymanagement.BottomNavigationBar.StockFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -24,9 +23,14 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+        String email = getIntent().getStringExtra("email");
+        Bundle b = new Bundle();
+         b.putString("email", email);
         bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setItemIconTintList(null);
-        getSupportFragmentManager().beginTransaction().replace(R.id.dashboard_fragment, new HomeFragment()).commit();
+        HomeFragment fragment = new HomeFragment();
+        fragment.setArguments(b);
+        getSupportFragmentManager().beginTransaction().replace(R.id.dashboard_fragment, fragment).commit();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -44,9 +48,6 @@ public class DashboardActivity extends AppCompatActivity {
                         break;
                     case R.id.navigation_contacts:
                         selectorFragment = new ContactsFragment();
-                        break;
-                    case R.id.navigation_settings:
-                        selectorFragment = new SettingFragment();
                         break;
                 }
 

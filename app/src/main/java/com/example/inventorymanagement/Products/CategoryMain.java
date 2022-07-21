@@ -35,7 +35,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.inventorymanagement.Models.Categories;
 import com.example.inventorymanagement.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,54 +45,47 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CategoryMain extends AppCompatActivity {
+public class CategoryMain extends AppCompatActivity implements RecyclerViewClickInterface {
 
     ImageView backBtn;
-    String url = "http://192.168.0.123/inventoryApp/categoryList.php";
+    String url = "http://10.0.2.2/inventoryApp/categoryList.php";
     TextView bottom_delete_link, bottom_edit_link;
     Button bottom_dialog_cancel_btn;
     Spinner categoryType;
     String type;
     String[] s_type =  {"Select Input Type ", "Date", "Text", "Number"};
-    private FloatingActionButton categoryFloatingBtn;
+    private ImageView categoryBtn;
     private RecyclerView recyclerView;
     private List<Categories> categories;
     private CategoryListAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_main);
+        setTitle("Item Category");
 
-        recyclerView = findViewById(R.id.categoryListView);
+        recyclerView = findViewById(R.id.locationListView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(CategoryMain.this));
-
-//        recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, final int position,
-//                                    long id) {
-//                bottomCustomDialog(position);
-//            }
-//        });
-
 
         categories = new ArrayList<Categories>();
 
         retrieveCategory();
 
-        backBtn = findViewById(R.id.back_button);
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+//        backBtn = findViewById(R.id.back_button);
+//        backBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
 
 
 
-        categoryFloatingBtn = findViewById(R.id.category_floating_button);
-        categoryFloatingBtn.setOnClickListener(new View.OnClickListener() {
+        categoryBtn = findViewById(R.id.category_floating_button);
+        categoryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 displayCustomDialog();
@@ -372,8 +364,8 @@ public class CategoryMain extends AppCompatActivity {
         int displayHeight = displayMetrics.heightPixels;
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         layoutParams.copyFrom(dialog.getWindow().getAttributes());
-        int dialogWindowWidth = (int) (displayWidth * 0.8f);
-        int dialogWindowHeight = (int) (displayHeight * 0.5f);
+        int dialogWindowWidth = (int) (displayWidth * 0.7f);
+        int dialogWindowHeight = (int) (displayHeight * 0.4f);
         layoutParams.width = dialogWindowWidth;
         layoutParams.height = dialogWindowHeight;
         dialog.getWindow().setAttributes(layoutParams);
@@ -397,7 +389,7 @@ public class CategoryMain extends AppCompatActivity {
                     //save
                     dialog.dismiss();
 
-                    String url = "http://192.168.0.123/inventoryApp/addCategory.php";
+                    String url = "http://10.0.2.2/inventoryApp/addCategory.php";
                     StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -406,7 +398,7 @@ public class CategoryMain extends AppCompatActivity {
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(CategoryMain.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CategoryMain.this, error.toString(), Toast.LENGTH_SHORT).show();
                         }
                     }
                     ){
@@ -432,4 +424,11 @@ public class CategoryMain extends AppCompatActivity {
 
         dialog.show();
     }
+
+    @Override
+    public void onItemClick(int position) {
+        bottomCustomDialog(position);
+    }
+
+    
 }

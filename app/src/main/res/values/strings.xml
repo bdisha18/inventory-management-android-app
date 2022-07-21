@@ -15,16 +15,16 @@
     <string name="contactno">Contact No.</string>
     <string name="continued">Continue</string>
     <string name="back">Back</string>
-    <string name="imgpass1">Fill up More Details.</string>
-    <string name="imgpass2">Set Profile Pic and Password.</string>
-    <string name="otp">Send an OTP.</string>
+    <string name="imgpass1">Fill up More Details</string>
+    <string name="imgpass2">Set Profile Pic and Password</string>
+    <string name="otp">Send an OTP</string>
     <string name="forgot_password1">Forgot Password</string>
-    <string name="forgot_password2">Enter your email address for password reset link.</string>
+    <string name="forgot_password2">Enter your email address for password reset link</string>
 
     <string name="title_activity_dashboard">Dashboard</string>
     <string name="title_home">Home</string>
-    <string name="title_vendors">Vendors</string>
-    <string name="title_suppliers">Suppliers</string>
+    <string name="title_vendors">Sellers</string>
+    <string name="title_suppliers">Buyers</string>
     <string name="title_stock">Stock</string>
     <string name="title_product">Products</string>
     <string name="title_contact">Clients</string>
@@ -38,6 +38,8 @@
     <string name="sort">Sort</string>
     <string name="stock_in">Stock In</string>
     <string name="stock_out">Stock Out</string>
+    <string name="audit">Audit</string>
+    <string name="move">Stock Move</string>
 
 
     <string name="title_notifications">Notifications</string>
@@ -46,16 +48,26 @@
     <string name="spinner_type_title">Select Type</string>
     <string name="spinner_colour_title">Select Colour</string>
 
-    <string name="input_vendor">Input Vendor</string>
-    <string name="input_supplier">Input Supplier</string>
-    <string name="please_input_vendor">Please Input Vendor Name</string>
-    <string name="please_input_supplier">Please Input Supplier name</string>
+    <string name="input_vendor">Input Seller</string>
+    <string name="input_supplier">Input Buyer</string>
+    <string name="please_input_vendor">Please Input Seller Name</string>
+    <string name="please_input_supplier">Please Input Buyer name</string>
 
     <string name="phone_number">Phone Number</string>
     <string name="generate_otp">Generate OTP</string>
     <string name="enter_otp">Enter OTP</string>
     <string name="verify_sign_in">Verify and Sign In</string>
     <string name="sign_out">sign out</string>
+    <string name="new_item">New Item</string>
+    <string name="item_name">Item Name</string>
+    <string name="barcode">Barcode</string>
+    <string name="sale">Sale Price</string>
+    <string name="cost">Cost Price</string>
+    <string name="categories">Categories</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

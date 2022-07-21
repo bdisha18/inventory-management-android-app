@@ -1,26 +1,26 @@
 package com.example.inventorymanagement.Models;
 
-public class Vendors {
-
+public class Customers {
     private String id, name, contact, email, address, note, city, zipcode, state;
-    
 
 
-    public Vendors(String vendor_id, String vendor_name, String vendor_contact, String vendor_email, String vendor_address, String note, String city, String state, String zipcode){
-        this.id= vendor_id;
-        this.name= vendor_name;
-        this.contact = vendor_contact;
-        this.email = vendor_email;
-        this.address= vendor_address;
+    public Customers(String id, String name, String contact, String email, String address, String note, String city, String state, String zipcode) {
+        this.id = id;
+        this.name = name;
+        this.contact = contact;
+        this.email = email;
+        this.address = address;
         this.note = note;
         this.city = city;
         this.state = state;
         this.zipcode = zipcode;
-    }
-
-    public Vendors() {
 
     }
+
+    public Customers(){
+
+    }
+
 
     public String getCity() {
         return city;

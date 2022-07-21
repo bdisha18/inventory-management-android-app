@@ -45,4 +45,5 @@ public class ProductCategory {
     public void setCategory_value(String category_value) {
         this.category_value = category_value;
     }
+
 }

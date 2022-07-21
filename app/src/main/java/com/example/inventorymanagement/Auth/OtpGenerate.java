@@ -1,8 +1,6 @@
 package com.example.inventorymanagement.Auth;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -20,24 +18,24 @@ public class OtpGenerate extends AppCompatActivity {
         setContentView(R.layout.activity_otp_generate);
 
 //        e_phone= findViewById(R.id.generate_otp);
-        sendOtp= findViewById(R.id.otp_button);
-
-        sendOtp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                String s_phone = e_phone.getText().toString().trim();
-
-                if(s_phone.isEmpty() || s_phone.length() < 10){
-                    e_phone.setError("Enter a valid phone number!!");
-                    e_phone.requestFocus();
-                    return;
-                }
-
-                Intent intent = new Intent(OtpGenerate.this, OtpVerification.class);
-                intent.putExtra("phone", s_phone);
-                startActivity(intent);
-            }
-        });
+//        sendOtp= findViewById(R.id.otp_button);
+//
+//        sendOtp.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                String s_phone = e_phone.getText().toString().trim();
+//
+//                if(s_phone.isEmpty() || s_phone.length() < 10){
+//                    e_phone.setError("Enter a valid phone number!!");
+//                    e_phone.requestFocus();
+//                    return;
+//                }
+//
+//                Intent intent = new Intent(OtpGenerate.this, OtpVerification.class);
+//                intent.putExtra("phone", s_phone);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

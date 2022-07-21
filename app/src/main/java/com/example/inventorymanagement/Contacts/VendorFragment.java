@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -30,7 +31,8 @@ import java.util.List;
 public class VendorFragment extends Fragment {
 
     FloatingActionButton vendor_floating_btn;
-    String url = "http://192.168.0.123/inventoryApp/vendorList.php";
+    TextView vendor_count;
+    String url = "http://10.0.2.2/inventoryApp/vendorList.php";
     private RecyclerView recyclerView;
     private VendorListAdapter adapter;
     private List<Vendors> vendorsList;
@@ -39,6 +41,8 @@ public class VendorFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_vendor, container, false);
+//        vendor_count = rootView.findViewById(R.id.total_vendors);
+//        vendor_count.setText(String.valueOf(vendorsList.size()));
 
         recyclerView = rootView.findViewById(R.id.vendorsListView);
         recyclerView.setHasFixedSize(true);
@@ -48,7 +52,7 @@ public class VendorFragment extends Fragment {
 
         retrieveVendors();
 
-        vendor_floating_btn = rootView.findViewById(R.id.vendor_floating_button);
+        vendor_floating_btn = rootView.findViewById(R.id.vendors_floating_button);
         vendor_floating_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -56,14 +56,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        otpButton = findViewById(R.id.otp_button);
-        otpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(LoginActivity.this, OtpGenerate.class);
-                startActivity(i);
-            }
-        });
+//        otpButton = findViewById(R.id.otp_button);
+//        otpButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(LoginActivity.this, OtpGenerate.class);
+//                startActivity(i);
+//            }
+//        });
 
 
         loginBtn = findViewById(R.id.signin_button);
@@ -82,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(txtEmail) || TextUtils.isEmpty(txtPassword)) {
             Toast.makeText(getApplicationContext(), "Enter Credentials!", Toast.LENGTH_SHORT).show();
         } else {
-            String url = "http://10.0.2.2:8080/inventoryApp/loginUser.php";
+            String url = "http://10.0.2.2/inventoryApp/loginUser.php";
             StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -90,12 +90,15 @@ public class LoginActivity extends AppCompatActivity {
                     password.setText("");
                     Toast.makeText(LoginActivity.this, response, Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(LoginActivity.this, DashboardActivity.class);
+                    i.putExtra("email", txtEmail);
                     startActivity(i);
                 }
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(LoginActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this,
+                            "not login",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
             ){

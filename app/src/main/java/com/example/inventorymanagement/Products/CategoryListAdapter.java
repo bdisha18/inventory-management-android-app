@@ -18,12 +18,16 @@ public class CategoryListAdapter extends RecyclerView.Adapter<CategoryListAdapte
 
     private Activity context;
     private List<Categories> categories;
+//    RecyclerViewClickInterface recyclerViewClickInterface;
+
 
 
     public CategoryListAdapter(Activity context, List<Categories> categories) {
         this.context = context;
         this.categories = categories;
+//        this.recyclerViewClickInterface = recyclerViewClickInterface;
     }
+
 
     @NonNull
     @Override
@@ -47,14 +51,21 @@ public class CategoryListAdapter extends RecyclerView.Adapter<CategoryListAdapte
         return categories.size();
     }
 
-    public class CategoriesHolder extends RecyclerView.ViewHolder {
+    public class CategoriesHolder extends RecyclerView.ViewHolder{
         TextView e_categoryName, e_categoryType;
 
         public CategoriesHolder(@NonNull View itemView) {
             super(itemView);
             e_categoryName = itemView.findViewById(R.id.category);
             e_categoryType = itemView.findViewById(R.id.category_type);
-        }
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                                            @Override
+//                                            public void onClick(View view) {
+//                    recyclerViewClickInterface.onItemClick(getAbsoluteAdapterPosition());
+//
+//                                            }
+//                                        });
 
-   }
+        }
+    }
 }

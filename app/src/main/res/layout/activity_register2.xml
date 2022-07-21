@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="20dp"
     tools:context=".Auth.Register2Activity">
 
 
@@ -19,23 +20,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
-
+        app:layout_constraintVertical_bias="0.087" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="592dp"
         android:text="@string/imgpass2"
+        android:textAlignment="center"
         android:textColor="@color/light_grey"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <ImageView
         android:id="@+id/e_image"
@@ -46,36 +46,35 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.293"
+        app:layout_constraintVertical_bias="0.279"
         app:srcCompat="@drawable/profile_pic_border" />
 
     <EditText
         android:id="@+id/e_companyname"
-        android:layout_width="370dp"
-        android:layout_height="73dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextborder"
         android:drawableRight="@drawable/ic_baseline_apartment_24"
         android:hint="@string/company_name"
-        android:padding="20dp"
+        android:padding="15dp"
         android:textColorHint="@color/light_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/e_image"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.106" />
 
     <EditText
         android:id="@+id/e_password"
-        android:layout_width="363dp"
-        android:layout_height="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:layout_marginBottom="220dp"
         android:background="@drawable/edittextborder"
         android:drawableRight="@drawable/ic_baseline_visibility_24"
         android:hint="@string/password"
-        android:padding="20dp"
+        android:padding="15dp"
         android:textColorHint="@color/light_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,42 +82,50 @@
         app:layout_constraintTop_toBottomOf="@+id/e_companyname"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/signup_btn"
-        android:layout_width="159dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="74dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="84dp"
-        android:background="@drawable/yellow_rounded_button"
-        android:padding="20dp"
-        android:text="@string/sign_up"
-        android:textColor="@color/dark_grey"
-        android:textSize="16sp"
-        android:textStyle="bold"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="164dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/e_password" />
-
-    <Button
-        android:id="@+id/backBtn"
-        android:layout_width="175dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="84dp"
-        android:background="@drawable/black_border"
-        android:padding="20dp"
-        android:text="@string/back"
-        android:textColor="@color/textColor"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/signup_btn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/e_password"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/e_password">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backBtn"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/black_border"
+            android:padding="15dp"
+            android:text="@string/back"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:strokeColor="@color/dark_grey"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signup_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:padding="15dp"
+            android:text="@string/sign_up"
+            android:textAllCaps="true"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

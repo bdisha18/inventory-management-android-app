@@ -10,7 +10,13 @@
 
     <color name="yellow">#ffd800</color>
     <color name="dark_grey">#636161</color>
-    <color name="default_grey">#F3F3F2</color>
-    <color name="light_grey">#B3B4B6</color>
+    <color name="grey1">#E8E8E8</color>
+    <color name="background_grey">#FBFBFB</color>
+    <color name="light_grey">#D7D7D8</color>
     <color name="textColor">#1E1E1E</color>
+    <color name="btn_grey">#45474C</color>
+    <color name="text_grey">#A0A3AA</color>
+    <color name="blueish_purple">#546EEF</color>
+    <color name="sky_blue">#2BBADD</color>
+    <color name="orange">#FF9A0D</color>
 </resources>

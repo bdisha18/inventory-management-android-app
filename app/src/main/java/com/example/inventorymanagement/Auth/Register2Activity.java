@@ -74,7 +74,7 @@ public class Register2Activity extends AppCompatActivity {
         } else if (password.length() < 6) {
             txtPassword.setError("Password should be atleast of 6 letters.");
         } else {
-            String url = "http://10.0.2.2:8080/inventoryApp/addUser.php";
+            final String url = "http://10.0.2.2/inventoryApp/addUser.php";
             StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {

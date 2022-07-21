@@ -1,6 +1,8 @@
 package com.example.inventorymanagement.Models;
 
-public class Products {
+import java.io.Serializable;
+
+public class Products implements Serializable {
     private String id;
     private String design;
     private String image;
@@ -9,11 +11,21 @@ public class Products {
     private String salePrice;
     private String purchasePrice;
 
+//    private boolean isChecked = false;
+//    public boolean isChecked(){
+//        return isChecked;
+//    }
+//
+//    public void setChecked(boolean checked){
+//        isChecked = checked;
+//    }
+
     public Products(){
 
     }
 
-    public Products(String id, String design, String image, String barcode, String quantity, String salePrice, String purchasePrice) {
+
+    public Products(String id, String design, String image, String barcode, String salePrice, String purchasePrice, String quantity) {
         this.id = id;
         this.design = design;
         this.image = image;
@@ -22,6 +34,7 @@ public class Products {
         this.salePrice = salePrice;
         this.purchasePrice = purchasePrice;
     }
+
 
     public String getId() {
         return id;
@@ -78,4 +91,5 @@ public class Products {
     public void setPurchasePrice(String purchasePrice) {
         this.purchasePrice = purchasePrice;
     }
+
 }

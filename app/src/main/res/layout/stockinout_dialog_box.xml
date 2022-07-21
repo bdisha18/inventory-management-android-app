@@ -53,4 +53,28 @@
         android:textColor="@color/dark_grey"
         android:textSize="18dp"/>
 
+<!--    <TextView-->
+<!--        android:id="@+id/stock_move"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:drawableLeft="@drawable/move"-->
+<!--        android:drawableRight="@drawable/arrow_size"-->
+<!--        android:drawablePadding="20dp"-->
+<!--        android:paddingVertical="15dp"-->
+<!--        android:text="@string/move"-->
+<!--        android:textColor="@color/dark_grey"-->
+<!--        android:textSize="18dp"/>-->
+
+    <TextView
+        android:id="@+id/audit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/two_arrows"
+        android:drawableRight="@drawable/arrow_size"
+        android:drawablePadding="20dp"
+        android:paddingVertical="15dp"
+        android:text="@string/audit"
+        android:textColor="@color/dark_grey"
+        android:textSize="18dp"/>
+
 </LinearLayout>

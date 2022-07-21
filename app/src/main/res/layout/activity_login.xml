@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="20dp"
     tools:context=".Auth.LoginActivity">
 
     <TextView
@@ -30,7 +31,7 @@
         android:layout_marginBottom="576dp"
         android:text="Welcome back!"
         android:textColor="@color/dark_grey"
-        android:textSize="40dp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,9 +46,8 @@
         android:layout_marginTop="9dp"
         android:layout_marginBottom="540dp"
         android:text="Login with your credentials..."
-        android:textColor="@color/dark_grey"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:textColor="@color/text_grey"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,33 +56,27 @@
 
     <EditText
         android:id="@+id/e_email"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="54dp"
-        android:layout_marginBottom="428dp"
-        android:width="350dp"
         android:background="@drawable/edittextborder"
-        android:drawableRight="@drawable/ic_baseline_phone_android_24"
+        android:drawableRight="@drawable/ic_baseline_mail_outline_24"
         android:hint="Email Address"
         android:padding="15dp"
         android:textColorHint="@color/light_grey"
-        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.098" />
 
     <EditText
         android:id="@+id/e_password"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="344dp"
-        android:width="350dp"
         android:background="@drawable/edittextborder"
         android:drawableRight="@drawable/ic_baseline_visibility_24"
         android:hint="Password"
@@ -92,66 +86,65 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/e_email"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.056" />
 
     <TextView
         android:id="@+id/forgotpassword_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginTop="23dp"
-        android:layout_marginBottom="300dp"
+
         android:text="Forgot Password"
         android:textColorHint="@color/dark_grey"
         android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/e_password"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.073" />
 
     <Button
         android:id="@+id/signin_button"
-        android:layout_width="320dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginBottom="168dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/yellow"
         android:hint="@string/sign_in"
-        android:padding="10dp"
+        android:padding="15dp"
         android:textAlignment="center"
         android:textColorHint="@color/dark_grey"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgotpassword_link" />
+        app:layout_constraintTop_toBottomOf="@+id/forgotpassword_link"
+        app:layout_constraintVertical_bias="0.297" />
 
-    <Button
-        android:id="@+id/otp_button"
-        android:layout_width="320dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginBottom="84dp"
-        android:background="@drawable/button_border"
-        android:hint="@string/otp"
-        android:padding="10dp"
-        android:textAlignment="center"
-        android:textColorHint="@color/dark_grey"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signin_button"
-        app:layout_constraintVertical_bias="0.0" />
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/otp_button"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        style="@style/Widget.Material3.Button.OutlinedButton"-->
+<!--        android:hint="@string/otp"-->
+<!--        app:cornerRadius="2dp"-->
+<!--        app:strokeWidth="2dp"-->
+<!--        app:strokeColor="@color/dark_grey"-->
+<!--        android:padding="20dp"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColorHint="@color/dark_grey"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/signin_button"-->
+<!--        app:layout_constraintVertical_bias="0.188" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

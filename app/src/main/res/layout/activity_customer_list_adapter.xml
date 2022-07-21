@@ -4,27 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".Contacts.SupplierListAdapter">
+    tools:context=".Contacts.CustomerListAdapter">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
         android:paddingVertical="20dp">
 
-    <TextView
-        android:id="@+id/supplier_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1"
-        android:textSize="16sp"/>
 
     <TextView
-        android:id="@+id/supplier_name"
-        android:layout_width="wrap_content"
+        android:id="@+id/customer_name"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:text="Supplier"
+        android:drawableRight="@drawable/arrow_size"
+        android:text="Customer"
         android:textSize="16sp"/>
 
     </LinearLayout>
@@ -32,6 +28,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/default_grey"/>
+        android:background="@color/grey1"/>
+
 
 </LinearLayout>

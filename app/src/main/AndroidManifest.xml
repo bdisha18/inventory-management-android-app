@@ -21,7 +21,38 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.InventoryManagement">
+        android:theme="@style/Theme.InventoryManagement"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Stock.StockDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectedItemListAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".SelectedItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Products.ProductDetailLocationListAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".Products.ProductDetailCategoryListAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".Location.LocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Stock.StockIn"
+            android:exported="false" />
+        <activity
+            android:name=".Stock.StockInnerListAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".Stock.StockListAdapter"
+            android:exported="false" />
         <activity
             android:name=".Products.ProductCategoryListAdapter"
             android:exported="false" />
@@ -38,10 +69,7 @@
             android:name=".Products.CategoryMain"
             android:exported="false" />
         <activity
-            android:name=".Products.ProductCategoryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Products.AddProducts"
+            android:name=".Products.AddProduct"
             android:exported="false" />
         <activity
             android:name=".Products.ScannedBarcode"
@@ -50,13 +78,13 @@
             android:name=".Contacts.VendorListAdapter"
             android:exported="false" />
         <activity
-            android:name=".Contacts.SupplierListAdapter"
+            android:name=".Contacts.CustomerListAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".Contacts.AddCustomerActivity"
             android:exported="false" />
         <activity
             android:name=".Contacts.AddVendorActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Contacts.AddSupplierActivity"
             android:exported="false" />
         <activity
             android:name=".Stock.AddStockActivity"
@@ -65,9 +93,9 @@
             android:name=".DashboardActivity"
             android:exported="false" />
 
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
+<!--        <uses-library-->
+<!--            android:name="org.apache.http.legacy"-->
+<!--            android:required="false" />-->
 
         <activity
             android:name=".Auth.OtpVerification"

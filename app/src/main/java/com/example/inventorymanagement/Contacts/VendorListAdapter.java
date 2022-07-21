@@ -34,7 +34,6 @@ public class VendorListAdapter extends RecyclerView.Adapter<VendorListAdapter.Ve
     @Override
     public void onBindViewHolder(@NonNull VendorsHolder holder, int position) {
         Vendors vendors = vendorsList.get(position);
-        holder.e_vendorId.setText(vendors.getId());
         holder.e_vendorName.setText(vendors.getName());
     }
 
@@ -44,10 +43,9 @@ public class VendorListAdapter extends RecyclerView.Adapter<VendorListAdapter.Ve
     }
 
     public class VendorsHolder extends RecyclerView.ViewHolder{
-        TextView e_vendorId, e_vendorName;
+        TextView e_vendorName;
         public VendorsHolder(@NonNull View itemView) {
             super(itemView);
-            e_vendorId = itemView.findViewById(R.id.vendor_id);
             e_vendorName = itemView.findViewById(R.id.vendor_name);
         }
     }
